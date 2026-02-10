@@ -1,0 +1,2 @@
+//advance rust notes
+//ja
