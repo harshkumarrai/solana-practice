@@ -1,0 +1,11 @@
+/target
+/solana-release
+/node_modules
+.DS_Store
+*.log
+*.env
+*.pem
+*.key
+/solana-1.17.15
+*solana-1.17.15*
+*solana-release*
