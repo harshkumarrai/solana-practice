@@ -7,6 +7,22 @@
 
 # Cargo.lock is usually committed but can be large
 Cargo.lock
+anchor-escrow/anchor
+anchor-escrow/DS_Store
+anchor-escrow/target
+anchor-escrow/**/*.rs.bk
+anchor-escrow/node_modules
+anchor-escrow/test-ledger
+anchor-escrow/yarn
+
+/.anchor
+/.DS_Store
+/target
+/**/*.rs.bk
+/node_modules
+/test-ledger
+/.yarn
+
 
 # Binary output
 rust-project-week10
