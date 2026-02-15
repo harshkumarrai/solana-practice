@@ -175,6 +175,62 @@ npm run dev
 
 ---
 
+:
+
+🚀 Production Deployment
+🌍 Live Architecture
+
+Frontend deployed on Vercel
+
+Backend (Rust + Actix Web) deployed on Railway
+
+WebSocket (WSS) enabled for secure real-time streaming
+
+Production API base URL configured via environment variables
+
+CORS enabled for cross-origin communication
+
+Railway service running on Port 8080
+
+🔐 Production Configuration
+
+BASE_URL switched from http://127.0.0.1:8080 →
+https://solana-practice-production.up.railway.app
+
+WebSocket upgraded from:
+
+ws://localhost:8080/ws
+
+
+to:
+
+wss://solana-practice-production.up.railway.app/ws
+
+
+Secure HTTPS + WSS enforced in production.
+
+📡 Deployment Architecture Diagram
+                ┌───────────────────┐
+                │     User Browser  │
+                └─────────┬─────────┘
+                          │
+                          ▼
+                ┌───────────────────┐
+                │  Vercel Frontend  │
+                │  (React + Recharts)│
+                └─────────┬─────────┘
+                          │ HTTPS / WSS
+                          ▼
+                ┌───────────────────┐
+                │ Railway Backend   │
+                │ Rust + Actix Web  │
+                │ Matching Engine   │
+                └─────────┬─────────┘
+                          │
+                          ▼
+                In-Memory Orderbook
+
+
 # 📌 Why This Project Matters
 
 This project demonstrates:

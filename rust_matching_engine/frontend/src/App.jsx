@@ -48,7 +48,7 @@ function App() {
   // WebSocket Real-Time
   // ---------------------------
   useEffect(() => {
-    const socket = new WebSocket("ws://127.0.0.1:8080/ws");
+    const socket = new WebSocket("wss://solana-practice-production.up.railway.app/ws");
 
     socket.onmessage = (event) => {
       const data = JSON.parse(event.data);
