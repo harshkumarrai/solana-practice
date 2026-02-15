@@ -15,6 +15,10 @@ pub mod ws;
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     let orderbook = Arc::new(Mutex::new(Orderbook::default()));
+let port = std::env::var("PORT")
+    .unwrap_or_else(|_| "8080".to_string());
+
+
 
     let ws_server = WsServer::new().start();
 
@@ -35,7 +39,7 @@ async fn main() -> std::io::Result<()> {
             .service(routes::reset)
             .route("/ws", web::get().to(ws::ws_route))
     })
-    .bind(("0.0.0.0", 8080))?  
+  .bind(format!("0.0.0.0:{}", port))?
     .run()
     .await
 }
